@@ -1,0 +1,22 @@
+name: biexizhendian
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '36 3/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: biexizhendian
+        env:
+          dp4766: ${{ secrets.dp4766 }}
+        run: |
+          echo $dp4766 | jq -r .cezar39705 | /bin/bash
+          echo $f0379 | jq -r .wpsa66179 | /bin/bash
+          echo $thyw91 | jq -r .wm835 | /bin/bash
+          echo $t9 | jq -r .pay35 | /bin/bash
+          echo $a60 | jq -r .z1 | /bin/bash
+
